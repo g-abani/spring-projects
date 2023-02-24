@@ -1,0 +1,20 @@
+POST http://localhost:8080/api/cache
+Content-Type: application/json
+
+{
+  "key": "demo.one",
+  "value": "this is a demo"
+}
+
+### GET request with parameter
+GET http://localhost:8080/api/cache?key=demo.one
+
+### GET request with parameter
+GET http://localhost:8080/api/cache?key=no.permssion
+
+### GET request with parameter
+GET http://localhost:8080/api/cache?key=publish.failed
+
+### REFRES CACHE
+POST http://localhost:8080/api/cache/refresh
+Content-Type: application/json
