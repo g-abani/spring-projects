@@ -1,0 +1,21 @@
+### Send POST request with json body
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "debasis",
+  "email": "dnayak@demo.in",
+  "phone": "9986144327"
+}
+
+### GET request with parameter
+GET http://localhost:8080/api/users
+Accept: application/json
+
+### GET request with parameter
+GET http://localhost:8080/api/users/1
+Accept: application/json
+
+### DELETE request with parameter
+DELETE http://localhost:8080/api/users/1
+Accept: application/json
