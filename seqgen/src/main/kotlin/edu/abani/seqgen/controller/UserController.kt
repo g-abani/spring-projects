@@ -26,6 +26,9 @@ class UserController(val userService: UserService) {
     @DeleteMapping("{id}")
     fun deleteUser(@PathVariable("id") id: Long) = userService.deleteUser( id )
 
+    @DeleteMapping
+    fun deleteAll() = userService.deleteAll()
+
     @PutMapping("{id}")
     fun updateUser(@RequestBody appUser: AppUser, @PathVariable("id") id: Long): AppUser =
         userService.updateUser(appUser, id)

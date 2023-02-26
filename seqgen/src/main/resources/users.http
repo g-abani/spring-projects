@@ -3,9 +3,9 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name": "debasis",
-  "email": "dnayak@demo.in",
-  "phone": "9986144327"
+  "name": "ind",
+  "email": "in@demo.in",
+  "phone": "9986144311"
 }
 
 ### GET request with parameter
@@ -13,9 +13,13 @@ GET http://localhost:8080/api/users
 Accept: application/json
 
 ### GET request with parameter
-GET http://localhost:8080/api/users/1
+GET http://localhost:8080/api/users/3
 Accept: application/json
 
 ### DELETE request with parameter
 DELETE http://localhost:8080/api/users/1
+Accept: application/json
+
+### DELETE All Users
+DELETE http://localhost:8080/api/users
 Accept: application/json

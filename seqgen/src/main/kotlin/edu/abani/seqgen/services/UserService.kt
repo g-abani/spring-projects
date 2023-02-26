@@ -10,11 +10,13 @@ class UserService(val userRepo: UserRepo) {
 
     fun getAllUsers(): List<AppUser> = userRepo.findAll();
 
-    fun getUserById(id: Long): AppUser = userRepo.getReferenceById(id)
+    fun getUserById(id: Long): AppUser = userRepo.getReferenceById( id )
 
-    fun saveUser(appUser: AppUser): AppUser = userRepo.save(appUser)
+    fun saveUser(appUser: AppUser): AppUser = userRepo.save( appUser )
 
     fun deleteUser(id: Long) = userRepo.deleteById( id )
+
+    fun deleteAll() = userRepo.deleteAll()
 
     fun updateUser(updates: AppUser, id: Long): AppUser {
         val user = userRepo.findById(id).orElseThrow()
