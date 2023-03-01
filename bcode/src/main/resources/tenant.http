@@ -1,0 +1,25 @@
+### GET ALL tenants
+GET http://localhost:8080/apis/tenant
+Accept: application/json
+
+### Send POST to create a tenant
+POST http://localhost:8080/apis/tenant
+Content-Type: application/json
+
+{
+  "name": "33",
+  "city": "444"
+}
+
+### GET ALL tenants
+GET http://localhost:8080/apis/owner
+Accept: application/json
+
+### Send POST to create a tenant
+POST http://localhost:8080/apis/owner
+Content-Type: application/json
+
+{
+  "name": "33",
+  "city": "444"
+}
