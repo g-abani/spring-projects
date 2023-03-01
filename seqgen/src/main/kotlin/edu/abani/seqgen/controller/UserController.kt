@@ -17,14 +17,17 @@ class UserController(val userService: UserService) {
     @GetMapping
     fun getAllUsers(): List<AppUser> = userService.getAllUsers()
 
-    @GetMapping("{id}")
-    fun getUser(@PathVariable("id") id: Long): AppUser = userService.getUserById( id )
+    /*@GetMapping("{id}")
+    fun getUser(@PathVariable("id") id: Long): AppUser = userService.getUserById( id )*/
+
+    @GetMapping("{code}")
+    fun getUserByCode(@PathVariable("code") code: String): AppUser = userService.getUserByCode(code)
 
     @PostMapping
     fun createUser(@RequestBody appUser: AppUser): AppUser = userService.saveUser( appUser )
 
     @DeleteMapping("{id}")
-    fun deleteUser(@PathVariable("id") id: Long) = userService.deleteUser( id )
+    fun deleteUser(@PathVariable("id") id: String) = userService.deleteByCode( id )
 
     @DeleteMapping
     fun deleteAll() = userService.deleteAll()

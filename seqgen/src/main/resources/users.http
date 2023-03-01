@@ -3,8 +3,8 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name": "ind",
-  "email": "in@demo.in",
+  "name": "del",
+  "email": "de@demo.in",
   "phone": "9986144311"
 }
 
@@ -13,13 +13,27 @@ GET http://localhost:8080/api/users
 Accept: application/json
 
 ### GET request with parameter
-GET http://localhost:8080/api/users/3
+GET http://localhost:8080/api/users/U00007
 Accept: application/json
 
 ### DELETE request with parameter
-DELETE http://localhost:8080/api/users/1
+DELETE http://localhost:8080/api/users/U00007
 Accept: application/json
 
 ### DELETE All Users
 DELETE http://localhost:8080/api/users
 Accept: application/json
+
+### GET ALL tenants
+GET http://localhost:8080/api/tenant
+Accept: application/json
+
+### Send POST to create a tenant
+POST http://localhost:8080/api/tenant
+Content-Type: application/json
+
+{
+  "name": "dilip",
+  "city": "bangalore",
+  "code": "U0003"
+}
